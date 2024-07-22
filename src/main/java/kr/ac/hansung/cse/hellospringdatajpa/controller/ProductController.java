@@ -37,6 +37,8 @@ public class ProductController {
     }
 
     @GetMapping("/edit/{id}")
+    //@PathVariable(name = "id")
+    //url 경로에서 변수 값(id)를 추출하여 매개변수에 할당
     public String showEditProductPage(@PathVariable(name = "id") int id, Model model) {
 
         Product product = service.get(id);
